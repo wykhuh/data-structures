@@ -16,6 +16,8 @@ var makeQueue = function(){
     if(beg < end){
       beg += 1;
       return storage[beg-1];
+    } else {
+      return;
     }
   };
 

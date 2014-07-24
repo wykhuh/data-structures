@@ -20,7 +20,7 @@ var queueMethods = {
       this.beg += 1;
       return this.storage[this.beg-1];
     } else {
-      throw {error:'whoa man!'};
+      return;
     }
   },
   size: function(){
