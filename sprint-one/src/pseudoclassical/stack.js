@@ -1,6 +1,20 @@
 var Stack = function() {
-  // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
+  this.storage = {};
+  this.numItems = 0;
 };
 
-
+Stack.prototype.pop = function(){
+  if (this.numItems > 0) {
+    this.numItems--;
+    var temp = this.storage[this.numItems];
+    delete this.storage[this.numItems];
+    return temp;
+  }
+};
+Stack.prototype.push = function(value){
+  this.storage[this.numItems] = value;
+  this.numItems++;
+};
+Stack.prototype.size = function(){
+  return this.numItems;
+};
