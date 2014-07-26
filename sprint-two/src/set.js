@@ -16,7 +16,11 @@ setPrototype.contains = function(item){
 
 setPrototype.remove = function(item){
   if(this._storage[item] !== undefined){
-    delete this._storage[item];
+    //set a temporary variable to store the item
+    var temp = this._storage[item];
+    delete this._storage[item]; //delete the item
+    //return temp variable
+    return temp;
   }
 };
 
